@@ -47,8 +47,10 @@ class RegisteredUserController extends Controller
             'DNI.unique' => 'Ese DNI ya está en uso por otro usuario',
         ]);
 
+        dd($request->nombre);
+
         $user = User::create([
-            'name'=> 'name',
+            'name'=> $request->nombre,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

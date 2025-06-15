@@ -47,10 +47,10 @@ class RegisteredUserController extends Controller
             'DNI.unique' => 'Ese DNI ya está en uso por otro usuario',
         ]);
 
-        dd($request->nombre);
+        dd("nombre???????????????????:      " . $request->nombre);
 
         $user = User::create([
-            'name'=> $request->nombre,
+            'name' => $request->nombre,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -62,9 +62,9 @@ class RegisteredUserController extends Controller
             'id_user' => $user->id
         ]);
 
-        if(Permisos::count()==0){
+        if (Permisos::count() == 0) {
             Permisos::create([
-                'id_persona'=>$cliente->id_persona,
+                'id_persona' => $cliente->id_persona,
             ]);
         }
 

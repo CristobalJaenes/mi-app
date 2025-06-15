@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => 'required|string',
+            'nombre' => 'required|string',
             'DNI' => 'required|string|unique:informacion,DNI',
             'tlf' => 'required|integer|min:0',
             'fecha_nac' => 'required',
@@ -47,10 +47,10 @@ class RegisteredUserController extends Controller
             'DNI.unique' => 'Ese DNI ya está en uso por otro usuario',
         ]);
 
-        dd("nombre???????????????????:      " . $request->nombre);
+        // dd("nombre???????????????????:      " . $request->nombre);
 
         $user = User::create([
-            'name' => $request->name,
+            'name' => $request->nombre,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

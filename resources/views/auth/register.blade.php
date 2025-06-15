@@ -27,7 +27,7 @@
 
             <div class="form-group mb-3">
                 <label for="nombre" class="text-white">Nombre </label>
-                <input type="text" class="form-control bg-dark text-white" id="name" name="name">
+                <input type="text" class="form-control bg-dark text-white" id="nombre" name="nombre">
             </div>
 
             <div class="form-group  mb-3">

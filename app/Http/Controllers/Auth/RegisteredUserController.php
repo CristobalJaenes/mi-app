@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'nombre' => 'required|string',
+            'name' => 'required|string',
             'DNI' => 'required|string|unique:informacion,DNI',
             'tlf' => 'required|integer|min:0',
             'fecha_nac' => 'required',
@@ -50,7 +50,7 @@ class RegisteredUserController extends Controller
         dd("nombre???????????????????:      " . $request->nombre);
 
         $user = User::create([
-            'name' => $request->nombre,
+            'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

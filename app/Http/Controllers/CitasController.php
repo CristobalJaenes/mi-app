@@ -306,9 +306,6 @@ class CitasController extends Controller
 
             session()->flash('status', 'Cita para ' . $nombre . ' editada para el ' . $fechaString . ' a las ' . $inicioFix->format('H:i'));
             return redirect()->route('panelCliente', ['id' => $cita->id_client])->with('status', 'Cita actualizada');
-
-            // session()->flash('status', 'Cita para ' . $nombre . ' editada para el ' . $fechaString . ' a las ' . $inicioFix->format('H:i'));
-            // return redirect()->back()->with('status', 'Cita actualizada');
         }
     }
 

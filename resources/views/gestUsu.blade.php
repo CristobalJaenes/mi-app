@@ -4,7 +4,6 @@
     <div class="gestUsuCont d-flex flex-column">
 
         <div class="row">
-            {{-- <form method="GET" action="{{ route('gestUsu', ['id' => $infoCliente->id_persona]) }}"> --}}
             <form method="GET" action="" id="gestUsuBusca">
                 @csrf
                 @if (session('status'))
@@ -23,7 +22,7 @@
                     </div>
                 @endif
                 <h1>Selecciona un usuario para modificar sus permisos</h1>
-                <select name="id_per" id="id_per" class="form-control bg-dark text-white mt-3" {{-- onchange="this.form.submit()"> --}}
+                <select name="id_per" id="id_per" class="form-control bg-dark text-white mt-3"
                     onchange="buscaUser()">
 
                     @foreach ($todoUsu as $usu)

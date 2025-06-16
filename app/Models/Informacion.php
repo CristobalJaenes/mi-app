@@ -32,10 +32,7 @@ class Informacion extends Model
             'tlf'         => $request->input('tlf'),
             'fecha_nac'   => $request->input('fecha_nac'),
             'direccion'   => $request->input('direcc'),
-            // 'email'       => $request->input('email') ?? "",
             'email' => $request->input('email') ? $request->input('email') : null,
-
-            // $info->email = $request->email ? $request->email : null;
         ]);
     }
 

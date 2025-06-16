@@ -22,7 +22,8 @@
     <p class="w-100 ms-4">{{ $infoCliente->DNI }}</p>
     <p class="w-100 ms-4">{{ $infoCliente->tlf }}</p>
     <p class="w-100 ms-4">{{ $infoCliente->direccion }}</p>
-    <p class="w-100 ms-4">{{ $infoCliente->fecha_nac }}</p>
+    <p class="w-100 ms-4">{{ \Carbon\Carbon::parse($infoCliente->fecha_nac)->format('d/m/Y') }}</p>
+    {{-- {{ \Carbon\Carbon::parse($dia)->format('d/m/Y') }} --}}
 </div>
 
 <script>

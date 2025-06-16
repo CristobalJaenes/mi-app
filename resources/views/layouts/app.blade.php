@@ -72,7 +72,7 @@
         @yield('content')
     </main>
 
-    <footer class="text-center py-4 mt-auto">
+    <footer class="text-center py-4 mt-auto text-white">
         <p>Esta es una versión de &copy;Smiletrack para la clinica dental "La Muelita".</p>
         <a href="{{route('ayuda')}}">
             Ayuda

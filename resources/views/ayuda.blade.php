@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('content')
-    <div class="editProf">
+    <div class="editProf text-white">
         <h1>Ayuda de la aplicación</h1>
         <p>Bienvenido a la ayuda online de Smiletrack</p>
 

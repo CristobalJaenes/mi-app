@@ -27,7 +27,7 @@
 
     <footer class="text-center py-4 mt-auto text-white">
         <p>Esta es una versión de &copy;Smiletrack para la clinica dental "La Muelita".</p>
-        <a href="{{ route('ayuda') }}">
+        <a href="{{ route('ayuda') }}" target="_blank" >
             Ayuda
         </a>
     </footer>

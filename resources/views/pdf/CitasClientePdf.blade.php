@@ -41,6 +41,7 @@
             <th>Fecha</th>
             <th>Dentista</th>
             <th>Descripcion</th>
+            <th>Precio</th>
         </thead>
 
         <tbody>
@@ -68,6 +69,7 @@
                     <td>
                         {{ $cita->descri }}
                     </td>
+                    <td>{{ $cita->precio }}</td>
                 </tr>
             @endforeach
         </tbody>

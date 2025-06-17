@@ -447,8 +447,8 @@ p {
     }
 
     .horarioTodo {
-        margin-left: 10% !important;
-        margin-right: 10% !important;
+        /* margin-left: 10% !important;
+        margin-right: 10% !important; */
     }
 
 
@@ -466,6 +466,7 @@ p {
     }
 
     .iniAux {
+        width: 100%;
         flex-direction: column-reverse !important;
     }
 

@@ -1,5 +1,5 @@
 
-<div class="horarioTodo" id="horarioTodo">
+<div class="horarioTodo m-auto" id="horarioTodo">
     @php
         $horas = [];
         $horaInicio = 540;

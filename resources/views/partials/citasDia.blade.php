@@ -2,9 +2,9 @@
     <div class="d-flex flex-row justify-content-between">
         <h1>Citas del {{ \Carbon\Carbon::parse($dia)->format('d/m/Y') }}</h1>
 
-        <a class="botonCitaNueva botonAzul btn bg-success text-white"
-            href="{{ route('citasDiaPdf', ['dia' => $dia]) }}" target="_blank">
-            Ver en pdf
+        <a class="botonCitaNueva botonAzul btn bg-success text-white" href="{{ route('citasDiaPdf', ['dia' => $dia]) }}"
+            target="_blank">
+            Ver en pdf {{ $dia }}
         </a>
     </div>
 

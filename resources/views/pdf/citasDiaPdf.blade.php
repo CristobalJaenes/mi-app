@@ -30,7 +30,7 @@
 
 <body>
     <div id="header">
-        <img src="{{ asset('images/logo.jpg') }}" alt="Logo" id="logo">
+        <img src="{{ public_path('images/logo.jpg') }}" alt="Logo" id="logo">
         <h2>Listado de citas del dia</h2>
     </div>
 

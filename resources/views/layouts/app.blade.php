@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SmileTrack</title>
-    <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/todo.css') }}">
 
@@ -51,7 +51,7 @@
                     @if (auth()->user()->esAdmin())
                         <a class="btn  botonAzul justify-content-center text-white d-flex flex-column"
                             {{-- href="{{ route('gestUsuPass',['id'=>Auth::id()]) }}"> --}}
-                            href="{{ route('gestUsuPass',['id'=>Auth::user()->userInfo->id_persona]) }}">
+                            href="{{ route('gestUsuPass', ['id' => Auth::user()->userInfo->id_persona]) }}">
                             <img src="{{ asset('images/crown.png') }}" alt="corona" class="imgTop">
                             Gestionar usuarios
                         </a>
@@ -75,7 +75,7 @@
 
     <footer class="text-center py-4 mt-auto text-white">
         <p>Esta es una versión de &copy;Smiletrack para la clinica dental "La Muelita".</p>
-        <a href="{{route('ayuda')}}" target="_blank" >
+        <a href="{{ route('ayuda') }}" target="_blank">
             Ayuda
         </a>
     </footer>

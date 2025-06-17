@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/todo.css') }}">
 
 </head>
@@ -28,7 +28,7 @@
 
     <footer class="text-center py-4 mt-auto text-white">
         <p>Esta es una versión de &copy;Smiletrack para la clinica dental "La Muelita".</p>
-        <a href="{{ route('ayuda') }}" target="_blank" >
+        <a href="{{ route('ayuda') }}" target="_blank">
             Ayuda
         </a>
     </footer>

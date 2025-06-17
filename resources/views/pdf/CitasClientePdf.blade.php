@@ -69,7 +69,7 @@
                     <td>
                         {{ $cita->descri }}
                     </td>
-                    <td>{{ $cita->precio }}</td>
+                    <td>{{ $cita->precio }}€</td>
                 </tr>
             @endforeach
         </tbody>

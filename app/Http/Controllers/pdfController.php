@@ -43,6 +43,7 @@ class pdfController extends Controller
         $nombresClientes = [];
         $nombresDent = [];
         foreach ($citasHoy as $cita) {
+
             $idAux = $cita->id_client;
             $esta = false;
             foreach ($nombresClientes as $nombre) {
@@ -68,7 +69,7 @@ class pdfController extends Controller
             }
         }
 
-        $pdf = Pdf::loadView('pdf.CitasdiaPdf', compact('citasHoy', 'dia', 'nombresClientes', 'nombresDent'));
+        $pdf = Pdf::loadView('pdf.citasdiaPdf', compact('citasHoy', 'dia', 'nombresClientes', 'nombresDent'));
         return $pdf->stream('citas_del_' . $dia . '.pdf');
     }
 
@@ -127,64 +128,7 @@ class pdfController extends Controller
 
         $todoCitas= $citasHoy->merge($citasFuturas)->merge($citasPasadas)->values();
 
-        $pdf = Pdf::loadView('pdf.CitasDentPdf', compact('todoCitas', 'nombreDent', 'nombresClientes'));
+        $pdf = Pdf::loadView('pdf.citasDentPdf', compact('todoCitas', 'nombreDent', 'nombresClientes'));
         return $pdf->stream('citas_de_' . $nombreDent . '.pdf');
     }
-
-    // public function CitasIdDent($id)
-    // {
-    // $auxaa = Informacion::findOrFail($id);
-    // $nombreDent = Informacion::where('id_persona', $id)->value('nombre');
-    // $fechaHoy = Carbon::today();
-    // $fechaMañana = Carbon::tomorrow();
-
-    // $citasHoy = Cita::where('id_dent', $id)->whereDate('date_ini', $fechaHoy)->orderBy('date_ini')->get();
-    // $citasFuturas = Cita::where('id_dent', $id)->whereDate('date_ini', '>=', $fechaMañana)->orderBy('date_ini')->get();
-    // $citasPasadas = Cita::where('id_dent', $id)->whereDate('date_ini', '<', $fechaHoy)->orderBy('date_ini')->get();
-    // $nombresClientes = [];
-    // foreach ($citasHoy as $cita) {
-    //     $idAux = $cita->id_client;
-    //     $esta = false;
-    //     foreach ($nombresClientes as $nombre) {
-    //         if ($nombre[0] == $idAux) {
-    //             $esta = true;
-    //         }
-    //     }
-    //     if (!$esta) {
-    //         $nombreAux = Informacion::where('id_persona', $idAux)->value('nombre');
-    //         $nombresClientes[] = [$idAux, $nombreAux];
-    //     }
-    // }
-
-    // foreach ($citasFuturas as $cita) {
-    //     $idAux = $cita->id_client;
-    //     $esta = false;
-    //     foreach ($nombresClientes as $nombre) {
-    //         if ($nombre[0] == $idAux) {
-    //             $esta = true;
-    //         }
-    //     }
-    //     if (!$esta) {
-    //         $nombreAux = Informacion::where('id_persona', $idAux)->value('nombre');
-    //         $nombresClientes[] = [$idAux, $nombreAux];
-    //     }
-    // }
-
-    // foreach ($citasPasadas as $cita) {
-    //     $idAux = $cita->id_client;
-    //     $esta = false;
-    //     foreach ($nombresClientes as $nombre) {
-    //         if ($nombre[0] == $idAux) {
-    //             $esta = true;
-    //         }
-    //     }
-    //     if (!$esta) {
-    //         $nombreAux = Informacion::where('id_persona', $idAux)->value('nombre');
-    //         $nombresClientes[] = [$idAux, $nombreAux];
-    //     }
-    // }
-    //     return response()->json([
-    //         'html' => view('partials.citasId', compact('citasHoy', 'citasFuturas', 'citasPasadas', 'nombreDent', 'nombresClientes'))->render(),
-    //     ]);
-    // }
 }

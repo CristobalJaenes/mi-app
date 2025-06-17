@@ -69,7 +69,7 @@ class pdfController extends Controller
             }
         }
 
-        $pdf = Pdf::loadView('pdf.citasdiaPdf', compact('citasHoy', 'dia', 'nombresClientes', 'nombresDent'));
+        $pdf = Pdf::loadView('pdf.citasDiaPdf', compact('citasHoy', 'dia', 'nombresClientes', 'nombresDent'));
         return $pdf->stream('citas_del_' . $dia . '.pdf');
     }
 

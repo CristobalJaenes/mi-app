@@ -46,7 +46,7 @@ class clienteController extends Controller
     public function panelCliente($id)
     {
         $infoCliente = Informacion::obtenerPorId($id);
-        $citasCliente  = Cita::obtenerCitasDeCliente($id)->orderBy('date_ini')->get();
+        $citasCliente  = Cita::obtenerCitasDeCliente($id)->sortBy('date_ini');
 
 
         $bocaCliente = Boca::obtenerBocaCliente($id);
